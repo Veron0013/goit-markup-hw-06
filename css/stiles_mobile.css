@@ -126,6 +126,7 @@ button {
 	fill: #2f2f37;
 }
 
+/* TAB */
 @media screen and (min-width:768px) {
 
 	.burger-button {
@@ -147,6 +148,7 @@ button {
 	}
 
 	.header-nav-list-item-link {
+		display: block;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 150%;
@@ -155,11 +157,6 @@ button {
 		position: relative;
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		padding: 24px 0;
-	}
-
-	.header-nav-list-item-link:hover,
-	.header-nav-list-item-link:focus {
-		color: #404bbf;
 	}
 
 	.active {
@@ -190,6 +187,7 @@ button {
 	}
 
 	.header-address-list-item-link {
+		display: block;
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 117%;
@@ -198,16 +196,16 @@ button {
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
+	.header-nav-list-item-link:hover,
+	.header-nav-list-item-link:focus,
 	.header-address-list-item-link:hover,
 	.header-address-list-item-link:focus {
 		color: #404bbf;
 	}
 
-	.header a {
-		display: inline-block;
-	}
-
 }
+
+/* PC  */
 
 @media screen and (min-width:1158px) {
 	.container {
@@ -215,4 +213,18 @@ button {
 		padding: 0 15px;
 	}
 
+	.header-nav-link {
+		margin-right: 76px;
+	}
+
+	.header-address-list {
+		flex-direction: row;
+		gap: 40px;
+	}
+
 }
+
+
+/* main */
+
+/* --banner-- */
