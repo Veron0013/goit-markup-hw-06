@@ -123,7 +123,7 @@ button {
 		min-width: 320px;
 		background-color: #fff;
 		transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-		transition-property: visibility, opacity;
+		transition-property: transform, visibility, opacity;
 		visibility: hidden;
 		opacity: 0;
 		pointer-events: none;
@@ -134,6 +134,11 @@ button {
 		visibility: visible;
 		opacity: 1;
 		pointer-events: all;
+		transform: translate(0, 0);
+	}
+
+	.mobile-menu:not(.is-open) {
+		transform: translate(100%);
 	}
 
 	.mobile-menu-container {
@@ -141,7 +146,6 @@ button {
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
-
 	}
 
 	.mobile-menu-btn {
@@ -991,8 +995,7 @@ button {
 	pointer-events: auto;
 }
 
-.backdrop:not(.is-open) .modal,
-.mobile-menu:not(.is-open) .mobile-menu {
+.backdrop:not(.is-open) .modal {
 	transform: translate(-100%, -100%);
 }
 
