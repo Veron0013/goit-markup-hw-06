@@ -202,11 +202,8 @@ button {
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	.mobile-menu-nav-list-item-link:hover,
-	.mobile-menu-nav-list-item-link:focus,
-	.mobile-menu-address-list-item-link:hover,
-	.mobile-menu-address-list-item-link:focus {
-		color: #404bbf;
+	.mobile-menu li:first-child a {
+		color: #4d5ae5;
 	}
 
 	.mobile-menu-nav-list-item-link {
@@ -341,10 +338,10 @@ button {
 
 .banner {
 	padding: 72px 0;
-	max-width: 767px;
+	max-width: 280px;
 	margin: 0 auto;
 	background-color: #2e2f42;
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_280.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -388,15 +385,28 @@ button {
 	background-color: #404bbf;
 }
 
+@media (min-resolution: 192dpi) {
+	.banner {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_280@2x.jpg);
+	}
+}
+
 @media screen and (min-width:768px) {
 	.banner {
 		padding: 112px 0;
-		max-width: 1199px;
+		max-width: 768px;
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_768.jpg);
 	}
 
 	.banner-main-header {
 		max-width: 496px;
-		margin-bottom: 36px;
+		margin-bottom: 56px;
+	}
+
+	@media (min-resolution: 192dpi) {
+		.banner {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_768@2x.jpg);
+		}
 	}
 
 }
@@ -406,21 +416,21 @@ button {
 @media screen and (min-width:1158px) {
 	.banner {
 		padding: 188px 0;
-		max-width: 1440px;
+		max-width: 1200px;
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
 	}
 
 	.banner-main-header {
 		margin-bottom: 48px;
 	}
 
-}
-
-@media screen and (min-resolution: 192dpi) {
-	.banner {
-		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+	@media (min-resolution: 192dpi) {
+		.banner {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+		}
 	}
-}
 
+}
 
 /* ---keypoints */
 
@@ -631,7 +641,7 @@ button {
 /** ------portfolio */
 
 .portfolio {
-	padding: 120px 0;
+	padding: 96px 0;
 }
 
 .portfolio-title {
@@ -731,6 +741,10 @@ button {
 /* PC  */
 
 @media screen and (min-width:1158px) {
+	.portfolio {
+		padding: 120px 0;
+	}
+
 	.portfolio picture img {
 		max-width: 360px;
 	}
@@ -855,7 +869,7 @@ button {
 .footer-subscribe-input {
 	border: 1px solid #fff;
 	border-radius: 4px;
-	width: 264px;
+	width: 288px;
 	height: 40px;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 	font-weight: 400;
@@ -899,7 +913,8 @@ button {
 	.footer .container {
 		justify-content: start;
 		column-gap: 24px;
-		padding-left: 108px;
+		/*padding-left: 108px;*/
+		width: 584px;
 	}
 
 	.footer-block {
@@ -926,6 +941,10 @@ button {
 		justify-content: start;
 		align-items: start;
 		gap: 24px;
+	}
+
+	.footer-subscribe-input {
+		width: 268px;
 	}
 }
 
@@ -1193,8 +1212,7 @@ button {
 
 @media screen and (max-width:767px) {
 	.backdrop .modal {
-		width: 320px;
-		height: 90%;
+		width: 288px;
 	}
 
 	.modal-form-input {
